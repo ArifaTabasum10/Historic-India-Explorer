@@ -3,10 +3,10 @@
       alert(`${place} added to your travel plan! 🚌 Estimated cost: ₹${price}`);
     }
 
-    function sharePlace() {
+    function sharePlace() { 
       if (navigator.share) {
         navigator.share({
-          url: window.location.href
+          url: window.location.href //using current window location
         });
       } else {
         alert("Sharing not supported on this device.");

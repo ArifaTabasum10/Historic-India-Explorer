@@ -1,6 +1,6 @@
 
 //for opening state in main page-------------------------------------------------nav page
-function navigateToState() {
+function navigateToState() { //to navigate function
     const select = document.getElementById("stateSelect");
     const url = select.value;
     if (url) {

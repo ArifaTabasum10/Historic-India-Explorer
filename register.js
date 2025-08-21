@@ -17,7 +17,7 @@ function register() {
     }
 }
 
-function Login() {
+function Login() { //function to login
     let name1 = document.getElementsByClassName('first1')[0].value;
     let password = document.getElementsByClassName('first2')[0].value;
 

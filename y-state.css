@@ -3,6 +3,7 @@
   flex-wrap: wrap;
 }
 .place-card {
+  /* color:white; */
   display: flex;
   background:radial-gradient(ghostwhite);
   border-radius: 12px;
