@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Booking Form</title>
+  <style>
+    *{
+      margin:0;
+      padding:0;
+    }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-image: url('https://wallpaperaccess.com/full/125081.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      position: fixed;
+      height:100vh;
+      width:100%;
+    }
+    .main{
+      width:100%;
+      height:100vh;
+      background-color: hsla(0, 0%, 100%, 0.3);
+      padding-top:10px;
+      position: fixed;
+    }
+
+    .form-box {
+      max-width: 500px;
+      margin: auto;
+      background: white;
+      border-radius: 12px;
+      padding: 2rem;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+      background-color: hsla(0, 0%, 0%, 0.7);
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 1.5rem;
+      color:white;
+    }
+
+    label {
+      font-weight: bold;
+      display: block;
+      margin-top: 1rem;
+      color:white;
+    }
+
+    input {
+      width: 100%;
+      padding: 0.7rem;
+      margin-top: 0.3rem;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+      background-color: hsla(0, 0%, 100%, 0.9);
+    }
+
+    button {
+      width: 40%;
+      padding: 0.8rem;
+      margin-top: 1.5rem;
+      margin-left:140px;
+      background:goldenrod;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: rgb(255, 183, 0);
+    }
+    a{
+          text-decoration: none;
+          color: black;
+        }
+      
+    a:hover{
+          text-decoration:underline;
+          color: black;
+        }
+  </style>
+</head>
+<body>
+  <div class="main">
+
+<div class="form-box">
+  <h2>Traveler Booking Details</h2>
+  <form id="bookingForm"  >
+    <label for="text">User Name</label>
+    <input type="text" id="text" name="text" required>
+
+    <label for="email">Email Address</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="passengers">Number of Passengers</label>
+    <input type="number" id="passengers" name="passengers" min="1" required>
+
+    <label for="startDate">Start Date of Journey</label>
+    <input type="date" id="startDate" name="startDate" required>
+
+    <button onclick="storeBookingData()"><a href="A_ticket.html" target="mainFrame">Book Now</a></button>
+  </form>
+</div>
+
+
+<script>
+  function storeBookingData() {
+    const name = document.getElementById("text").value;
+    const email = document.getElementById("email").value;
+    const passengers = document.getElementById("passengers").value;
+    const startDate = document.getElementById("startDate").value;
+
+    localStorage.setItem("bookingname", name);
+    localStorage.setItem("bookingEmail", email);
+    localStorage.setItem("bookingPassengers", passengers);
+    localStorage.setItem("bookingStartDate", startDate);
+  }
+</script>
+</div>
+</body>
+</html>
+

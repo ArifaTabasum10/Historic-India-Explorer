@@ -1,0 +1,207 @@
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f5f5f5;
+  color: #222;
+}
+
+.hero {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.hero-content {
+  z-index: 1;
+  text-align: center;
+  color: white;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 10px;
+  border-radius: 15px;
+}
+.hero h1 {
+  font-size: 45px;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 20px;
+}
+h2{
+  font-size:40px ; 
+  color: #2c2b2b; 
+  margin-bottom: 60px; 
+  font-weight: 500;
+  text-align: center;
+  
+}
+
+/* Content Section */
+.content{
+  padding: 80px 40px;
+  text-align: center;
+}
+
+
+.features ,.books{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.feature-card,.bookcard {
+  background: linear-gradient(to right, #ffe9d0, #ffffff); 
+  border-radius: 12px;
+  box-shadow: 10px 10px 12px rgba(255, 255, 255, 0.1);
+  width: 300px;
+  transition: transform 0.3s ease;
+  
+}
+.bookcard {
+ background: #f5f5f5;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+}
+
+.feature-card img {
+  width: 100%;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  height:50vh;
+  
+}
+
+.feature-card h3,p {
+  text-align: center;
+}
+
+/*Bookings*/
+.bookings{
+  padding: 60px 20px;
+  background: linear-gradient(to right, #fdc93c, #f6d094); 
+   text-align: center;
+}
+.bookcard img {
+  width: 100%;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  height:50vh;
+  
+}
+.bookcard button{
+  background: #e67e22;
+  color: white;
+  padding: 10px 20px; 
+  border: none; 
+  border-radius: 25px; 
+  cursor: pointer;
+  margin-bottom:7px;
+}a{
+  text-decoration: none;
+  color:rgb(255, 255, 255);
+}
+
+/* review card */
+.reviewcard{
+  background: white; 
+  padding: 30px; 
+  border-radius: 15px; 
+  width: 300px; 
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1); 
+  text-align: left;
+}
+.reviewcard img{
+  width: 50px; 
+  height: 50px; 
+  border-radius: 50%; 
+  margin-right: 20px;
+}
+
+/* Footer */
+footer {
+  background: #001b36;
+  color: white;
+  padding:40px;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.footer-content div {
+  width: 30%;
+  margin-bottom: 20px;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 30px;
+}
+
+
+.middle{
+    background-color: black;
+    width:75%;
+    height:73vh;
+    margin-left:12%;
+    display:flex;
+    background-image: url('https://www.thewickery.com/wp-content/uploads/2018/10/wickery-img-1_102418.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    .img{
+        border:1px solid white;
+        width:25%;
+        height:64.5vh;
+        margin-left:0;
+        margin-top:0%;
+        font-family: Smooth, stylish, friendly handwriting style;
+        font-size:large;
+        display:flex;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        color:transparent;
+        padding-top: 50px;
+    }
+    .img:hover{
+        background-color: hsla(0, 0%, 100%, 0.8);
+        position: relative;
+        display: inline-block;
+        border: 2px solid rgb(255, 255, 255);
+        /* padding: 10px; */
+        cursor: pointer;
+        span{
+            color:black;
+            text-align: center;
+        }
+        b{
+            color:rgb(1, 9, 64);
+            text-align:center;
+            font-size: larger;
+        }
+        
+    }
+        
+}

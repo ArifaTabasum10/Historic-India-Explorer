@@ -1,0 +1,55 @@
+.big{
+  display:flex;
+  flex-wrap: wrap;
+}
+.place-card {
+  display: flex;
+  background:radial-gradient(ghostwhite);
+  border-radius: 12px;
+  margin: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  overflow: hidden;
+  width:45%;
+  display: flex;
+ 
+}
+
+.place-card img {
+  margin-top:12px ;
+  margin-left:7px ;
+  width: 250px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.details {
+  padding: 15px;
+  flex: 1;
+}
+
+.details h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.details button {
+  background-color: #056ddc;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  margin-top: 10px;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.details button:hover {
+  background-color: #00448c;
+}
+
+.details a {
+  margin-left: 10px;
+  text-decoration: none;
+  color: #007bff;
+}

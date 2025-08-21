@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <script type="text/javascript" src="script.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      color: ghostwhite;
+    }
+    .logo {
+      font-size: 30px;
+      font-weight: bold;
+      color:rgb(0, 0, 44);
+    }
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.5rem 2rem;
+    }
+    .login-btn {
+      background: #ffffff;
+      padding: 0.4rem 1rem;
+      border-radius: 8px;
+      text-decoration: none;
+      color: rgb(1, 0, 43);
+      font-weight:500;
+      margin-right:10px;
+      margin-left: 10px;
+    }
+    .login-btn:hover{
+      background-color:gold;
+    }
+  </style>
+  <script type="text/javascript" drc="script.js"></script>
+</head>
+
+
+<body>
+  <div class="navbar">
+    <div class="logo">🕌 Historic India Explorer</div>
+    
+
+      <form target="mainFrame">
+    <select id="stateSelect" onchange="navigateToState()" style="
+  padding:4px;
+  width:160%;
+  font-size: 1rem;
+  border: 1px solid navy;
+  border-radius: 15px;
+  background: #fff;
+  color: #333;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+">
+  <option disabled selected>Select a State</option>
+        <optgroup label="South India">
+          <option value="y-andhra.html">Andhra Pradesh.</option>
+    <option value="y-karnataka.html">Karnataka.</option>
+    <option value="y-tamilnadu.html">Tamil Nadu.</option>
+    <option value="y-telangana.html">Telangana.</option>
+    <option value="y-kerala.html">Kerala</option>
+  </optgroup>
+
+
+  <optgroup label="North India">
+    <option value="y-jk.html" >Jammu & Kashmir.</option>
+    <option value="himachalpradesh.html" >Himachal Pradesh</option>
+    <option value="y-punjab.html">Punjab..</option>
+    <option value="pages/uttarakhand.html">Uttarakhand</option>
+    <option value="y-haryana.html">Haryana.</option>
+    <option value="y-delhi.html">Delhi.</option>
+    <option value="pages/uttarpradesh.html">Uttar Pradesh</option>
+    <option value="y-rajasthan.html">Rajasthan.</option>
+  </optgroup>
+
+  <optgroup label="West India">
+    <option value="y-gujarat.html">Gujarat.</option>
+    <option value="y-maharashtra.html">Maharashtra.</option>
+    <option value="pages/goa.html">Goa</option>
+  </optgroup>
+
+  <optgroup label="East India">
+    <option value="y-jharkhand.html">Jharkhand..</option>
+    <option value="y-bihar.html">Bihar.</option>
+    <option value="y-westbengal.html">West Bengal..</option>
+    <option value="y-odisha.html">Odisha..</option>
+  </optgroup>
+
+  <optgroup label="Central India">
+    <option value="pages/madhyapradesh.html">Madhya Pradesh</option>
+    <option value="pages/chhattisgarh.html">Chhattisgarh</option>
+  </optgroup>
+
+  <optgroup label="North-East India">
+    <option value="y-assam.html">Assam.</option>
+    <option value="y-arunachal.html">Arunachal Pradesh.</option>
+    <option value="pages/manipur.html">Manipur</option>
+    <option value="pages/meghalaya.html">Meghalaya</option>
+    <option value="pages/mizoram.html">Mizoram</option>
+    <option value="pages/nagaland.html">Nagaland</option>
+    <option value="pages/sikkim.html">Sikkim</option>
+    <option value="pages/tripura.html">Tripura</option>
+  </optgroup>
+</select>
+</form>
+   
+    <div>
+    <a href="index.html" target="mainFrame" class="login-btn"><i class="fas fa-home"></i></a>
+    <a href="bus.html" target="mainFrame" class="login-btn">Cart🚌</a>
+    <a href="offers.html" class="login-btn" target="mainFrame">Offers</a>
+    <a href="login.html" class="login-btn" target="mainFrame">Login</a>
+  </div>
+
+  
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Your Travel Ticket</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      padding: 2rem;
+       background-image: url('https://png.pngtree.com/thumb_back/fh260/background/20220313/pngtree-spring-festival-ticket-grab-concept-map-air-ticket-map-image_1060234.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+    
+    }
+
+    .ticket-box {
+      background:linear-gradient(to right,white,bisque);
+      max-width: 600px;
+      margin: auto;
+      padding-left:2rem ;
+      padding-top:1rem ;
+      padding-bottom:2rem ;
+      border-radius: 2px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 1.5rem;
+      color: #333;
+      
+    }
+
+    p, li {
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+      
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    .highlight {
+      font-weight: bold;
+      color: #2c3e50;
+    }
+    
+  </style>
+</head>
+<body>
+
+<div class="ticket-box">
+  
+  
+<h2>🕌 Historic India Explorer</h2>
+  <h2>Your Travel Ticket</h2>
+  
+  
+    <p><span class="highlight">UserName:</span> <span id="nameDisplay"></span></p>
+  <p><span class="highlight">Passengers:</span> <span id="passengerDisplay"></span></p>
+  <p><span class="highlight">Start Date:</span> <span id="startDateDisplay"></span></p>
+  <p><span class="highlight">End Date:</span> <span id="endDateDisplay"></span></p>
+    <p><span class="highlight">Email:</span> <span id="emailDisplay"></span></p>
+    <p><span class="highlight">Selected Places:</span></p>
+  <ul id="placesList"></ul>
+  <p><span class="highlight">Total Price:</span> ₹<span id="priceDisplay"></span></p>
+    <p>The furthur details will be sent to your Mail!</p>
+</div>
+  
+  
+
+<script>
+  
+  const name = localStorage.getItem("bookingname");
+  const email = localStorage.getItem("bookingEmail");
+  const passengers = parseInt(localStorage.getItem("bookingPassengers"));
+  const startDateStr = localStorage.getItem("bookingStartDate");
+  const CartItems = JSON.parse(localStorage.getItem("CartItems")) || [];
+
+  const startDate = new Date(startDateStr);
+  const tripDays = CartItems.length;
+  const endDate = new Date(startDate);
+  endDate.setDate(startDate.getDate() + tripDays - 1);
+
+  let totalPrice = 0;
+  CartItems.forEach(item => {
+    totalPrice += item.price;
+  });
+  const finalPrice = totalPrice * passengers;
+
+  // Update ticket
+  document.getElementById("nameDisplay").textContent = name;
+  document.getElementById("passengerDisplay").textContent = passengers;
+  document.getElementById("startDateDisplay").textContent = startDate.toDateString();
+  document.getElementById("endDateDisplay").textContent = endDate.toDateString();
+  document.getElementById("emailDisplay").textContent = email;
+  document.getElementById("priceDisplay").textContent = finalPrice;
+
+  const placesList = document.getElementById("placesList");
+  CartItems.forEach(item => {
+    const li = document.createElement("li");
+    li.textContent = item.name;
+    placesList.appendChild(li);
+  });
+</script>
+
+</body>
+</html>
+
+
+
