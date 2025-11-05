@@ -62,7 +62,7 @@ This project strengthened my understanding of:
 ---
 
 ## 🔗 GitHub Repository
-👉 [Add your GitHub repo link here]  
+👉 https://github.com/ArifaTabasum10/Historic-India-Explorer.git 
 
 ---
 
